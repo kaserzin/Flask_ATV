@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Federação Paraibana de Volei</title>
+</head>
+<body>
+    <h2> Federação Paraibana de Vôlei<h2>
+    <h3>Lista de Atletas Federados</h3>
+    <button><a href="{{ url_for('cadastrar') }}">Adicionar atleta</a></button>
+    <button><a href="{{ url_for('listar_times') }}">Visualizar times </a></button>
+    <button><a href="{{ url_for('listar_arbitro') }}">Visualizar arbitros </a></button>
+    <button><a href="{{ url_for('listar_competicao') }}">Visualizar Competições </a></button>
+    {% if not atletas %}
+    <p>Não há atletas registrados</p>
+    {% endif %}
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Posicao</th>
+                <th>Altura</th>
+                <th>Editar</th>
+                <th>Remover</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for atleta in atletas %}
+            <tr>
+                <td>{{ atleta.nome }}</td>
+                <td>{{ atleta.posicao }}</td>
+                <td>{{ atleta.altura }}</td>
+                <td><a href="{{ url_for('editar', chave=atleta.id)}}">Editar</a></td>
+                <td><a href="{{ url_for('apagar', chave=atleta.id)}}">Remover</a></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

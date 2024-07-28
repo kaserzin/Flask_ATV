@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+<body>
+    <h2> Federação Paraibana de Vôlei<h2>
+    <h3>{{ title }}</h3>
+    <form method="post">
+        <label for="nome">Nome do Arbitro
+            <input type="text" name="nome" placeholder="Ex: Ribamar" value="{{ arbitro.nome}}" required/>
+        </label>
+        <label for="documento">Documento
+            <input type="number" name="documento" placeholder="Ex: 1234-5" value="{{ arbitro.documento}}" required/>
+        </label>
+        <button type="submit">Salvar</button>
+    </form>
+</body>
+</html>

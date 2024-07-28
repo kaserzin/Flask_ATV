@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+<body>
+    <h2> Federação Paraibana de Vôlei<h2>
+    <h3>{{ title }}</h3>
+    <form method="post">
+        <label for="nome">Nome do atleta
+            <input type="text" name="nome" placeholder="Ex: Giba" value="{{ atleta.nome}}" required/>
+        </label>
+        <label for="posicao">Posicao
+            <input type="text" name="posicao" placeholder="Ex: Central, Ponteiro" value="{{ atleta.posicao}}" required/>
+        </label>
+        <label for="altura">Altura do Atleta
+            <input type="number" name="altura" placeholder="Altura em centímetros" value="{{ atleta.altura}}" required/>
+        </label>
+        <button type="submit">Salvar</button>
+    </form>
+</body>
+</html>

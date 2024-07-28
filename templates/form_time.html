@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+<body>
+    <h2> Federação Paraibana de Vôlei<h2>
+    <h3>{{ title }}</h3>
+    <form method="post">
+        <label for="nome">Nome do time
+            <input type="text" name="nome" placeholder="Ex: Sesi" value="{{ time.nome}}" required/>
+        </label>
+        <button type="submit">Salvar</button>
+    </form>
+</body>
+</html>

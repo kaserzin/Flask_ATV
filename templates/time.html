@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Federação Paraibana de Volei</title>
+</head>
+<body>
+    <h2> Federação Paraibana de Vôlei<h2>
+    <h3>Lista de Times Federados</h3>
+    <button><a href="{{ url_for('cadastrar_time') }}">Adicionar Time</a></button>
+    <button><a href="{{ url_for('listar_atletas') }}">Visualizar Atletas </a></button>
+    <button><a href="{{ url_for('listar_arbitro') }}">Visualizar Arbitros </a></button>
+    <button><a href="{{ url_for('listar_competicao') }}">Visualizar Competições </a></button>
+    {% if not times %}
+        <p>Não há times registrados</p>
+    {% endif %}
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Editar</th>
+                    <th>Remover</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for times in times %}
+                <tr>
+                    <td>{{ times.nome }}</td>
+                    <td><a href="{{ url_for('editar_time', chave=times.id)}}">Editar</a></td>
+                    <td><a href="{{ url_for('apagar_time', chave=times.id)}}">Remover</a></td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+</body>
+</html>
