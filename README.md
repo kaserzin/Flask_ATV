@@ -54,8 +54,6 @@ Exemplo de tabela na página `volei.html` para listar atletas:
         </tbody>
     </table>
 ```
-### Arquivos CSS
-O estilo do site é gerenciado através de arquivos CSS, que podem estar localizados na pasta /static/css/ se necessário. Estes arquivos controlam o layout e o design visual da aplicação, garantindo uma apresentação consistente e atraente.
 
 ### Melhoria Contínua
 O projeto é constantemente atualizado para melhorar a funcionalidade e a usabilidade. Sugestões e feedback dos usuários são bem-vindos para implementar melhorias e adicionar novas funcionalidades.
