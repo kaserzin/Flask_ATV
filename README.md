@@ -38,15 +38,14 @@ Exemplo de tabela na página `volei.html` para listar atletas:
       <th>Nome</th>
       <th>Posição</th>
       <th>Altura</th>
-      <th>Ações</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>1</td>
-      <td>João Silva</td>
-      <td>Atacante</td>
-      <td>1.90m</td>
+      <td>Giba</td>
+      <td>Ponteiro</td>
+      <td>192</td>
       <td>
         <a href="/editar/1">Editar</a>
         <a href="/remover/1">Remover</a>
