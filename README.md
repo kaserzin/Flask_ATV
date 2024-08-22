@@ -57,9 +57,6 @@ Exemplo de tabela na página `volei.html` para listar atletas:
 ### Arquivos CSS
 O estilo do site é gerenciado através de arquivos CSS, que podem estar localizados na pasta /static/css/ se necessário. Estes arquivos controlam o layout e o design visual da aplicação, garantindo uma apresentação consistente e atraente.
 
-### Implementação de Design Responsivo
-O design da aplicação é responsivo, o que garante que a interface seja utilizável em dispositivos móveis, tablets e desktops. Isso é alcançado através de media queries no CSS, adaptando o layout conforme o tamanho da tela do dispositivo.
-
 ### Melhoria Contínua
 O projeto é constantemente atualizado para melhorar a funcionalidade e a usabilidade. Sugestões e feedback dos usuários são bem-vindos para implementar melhorias e adicionar novas funcionalidades.
 
