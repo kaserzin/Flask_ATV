@@ -31,28 +31,28 @@ Os templates HTML fornecem uma interface intuitiva para interação com o sistem
 Exemplo de tabela na página `volei.html` para listar atletas:
 
 ```html
-<table border="1">
-  <thead>
-    <tr>
-      <th>ID</th>
-      <th>Nome</th>
-      <th>Posição</th>
-      <th>Altura</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>1</td>
-      <td>Giba</td>
-      <td>Ponteiro</td>
-      <td>192</td>
-      <td>
-        <a href="/editar/1">Editar</a>
-        <a href="/remover/1">Remover</a>
-      </td>
-    </tr>
-  </tbody>
-</table>
+ <table border="1">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Posicao</th>
+                <th>Altura</th>
+                <th>Editar</th>
+                <th>Remover</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for atleta in atletas %}
+            <tr>
+                <td>{{ atleta.nome }}</td>
+                <td>{{ atleta.posicao }}</td>
+                <td>{{ atleta.altura }}</td>
+                <td><a href="{{ url_for('editar', chave=atleta.id)}}">Editar</a></td>
+                <td><a href="{{ url_for('apagar', chave=atleta.id)}}">Remover</a></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
 ```
 ### Arquivos CSS
 O estilo do site é gerenciado através de arquivos CSS, que podem estar localizados na pasta /static/css/ se necessário. Estes arquivos controlam o layout e o design visual da aplicação, garantindo uma apresentação consistente e atraente.
